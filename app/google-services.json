@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063216733933",
+    "project_id": "bakeryrewardsandroid",
+    "storage_bucket": "bakeryrewardsandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063216733933:android:e480dbd50e008cba7076e4",
+        "android_client_info": {
+          "package_name": "com.example.bakeryrewardsandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063216733933-31m7eq7p75muin2n48a9dhe6i3emshj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUx1htfCmtjdkJ8F3n89sXQTbCHqS2jOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063216733933-31m7eq7p75muin2n48a9dhe6i3emshj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
