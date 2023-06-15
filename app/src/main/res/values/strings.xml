@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BakeryRewardsAndroid</string>
+    <string name="loginTitle">Login</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="click_to_sign_up">Click to sign up</string>
+    <string name="submitLogin">Submit</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="logout">Logout</string>
 </resources>
