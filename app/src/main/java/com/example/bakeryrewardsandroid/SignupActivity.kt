@@ -49,6 +49,9 @@ class SignupActivity : AppCompatActivity() {
             if (email.isEmpty() || password.isEmpty() || password2.isEmpty()){
                 Toast.makeText(this,"One of the fields is empty",Toast.LENGTH_SHORT).show()
             }
+            else if (password != password2){
+                Toast.makeText(this,"Passwords do not match",Toast.LENGTH_SHORT).show()
+            }
             else{
                 progressBar.visibility = View.VISIBLE
                 auth.createUserWithEmailAndPassword(email, password)
