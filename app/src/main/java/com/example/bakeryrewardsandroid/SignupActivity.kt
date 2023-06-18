@@ -11,6 +11,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
     lateinit var emailET : TextInputEditText
@@ -58,6 +60,11 @@ class SignupActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             progressBar.visibility = View.GONE
+                            val user = auth.currentUser!!
+                            val database = Firebase.database
+                            val myRef = database.getReference(user.uid)
+                            myRef.child("email").setValue(user.email)
+                            myRef.child("points").setValue(120)
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(
                                 this,

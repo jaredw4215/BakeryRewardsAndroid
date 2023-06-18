@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlin.math.log
 
-class ProfileFragment : Fragment(R.layout.fragment_profile) {
+class ProfileFragment : Fragment() {
     lateinit var tempTV : TextView
     lateinit var logoutButton : Button
     lateinit var auth : FirebaseAuth
@@ -29,6 +29,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         tempTV = v.findViewById(R.id.tempTV)
         logoutButton = v.findViewById(R.id.logout)
         tempTV.text = user.email
+
         logoutButton.setOnClickListener {
             auth.signOut()
             val intent : Intent = Intent(activity,LoginActivity::class.java)

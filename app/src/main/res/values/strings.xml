@@ -11,4 +11,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
+    <string name="my_points">My Points</string>
+    <string name="point_num">0</string>
+    <string name="item_scroll" />
 </resources>

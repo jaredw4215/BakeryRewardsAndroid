@@ -3,10 +3,7 @@ package com.example.bakeryrewardsandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.example.bakeryrewardsandroid.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -36,12 +33,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        user = auth.currentUser!!
-
-        val database = Firebase.database
-        val myRef = database.getReference(user.uid)
-        myRef.child("email").setValue(user.email)
-        myRef.child("points").setValue(0)
 
     }
     private fun replaceFragment(fragment : Fragment){
