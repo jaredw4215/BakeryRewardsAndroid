@@ -14,4 +14,9 @@
     <string name="my_points">My Points</string>
     <string name="point_num">0</string>
     <string name="item_scroll" />
+    <string name="itemDescriptionTV">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="itemName">TextView</string>
+    <string name="buyButton">Buy</string>
 </resources>

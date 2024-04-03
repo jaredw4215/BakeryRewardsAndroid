@@ -5,6 +5,10 @@
         android:icon="@drawable/ic_home"
         android:title="Home"/>
     <item
+        android:id="@+id/bottom_earn"
+        android:icon="@drawable/baseline_attach_money_24"
+        android:title="Earn" />
+    <item
         android:id="@+id/bottom_profile"
         android:icon="@drawable/ic_profile"
         android:title="Profile"/>

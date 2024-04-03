@@ -25,9 +25,8 @@ class SignupActivity : AppCompatActivity() {
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-            val intent : Intent = Intent(this,MainActivity::class.java)
+        if (auth.currentUser != null) {
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -60,11 +59,7 @@ class SignupActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             progressBar.visibility = View.GONE
-                            val user = auth.currentUser!!
-                            val database = Firebase.database
-                            val myRef = database.getReference(user.uid)
-                            myRef.child("email").setValue(user.email)
-                            myRef.child("points").setValue(120)
+                            addUser(password,10000)
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(
                                 this,
@@ -88,5 +83,14 @@ class SignupActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    private fun addUser(password: String, points: Int){
+        val user = auth.currentUser!!
+        val database = Firebase.database
+        val userObj = User(user.email,password,points)
+        val myRef = database.getReference("users")
+        myRef.child(user.uid).setValue(userObj)
+
     }
 }

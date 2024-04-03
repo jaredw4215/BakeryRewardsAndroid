@@ -9,19 +9,25 @@
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center|top"
         android:orientation="vertical"
         android:paddingVertical="10dp"
         tools:ignore="UselessParent">
 
+
         <androidx.cardview.widget.CardView
             android:id="@+id/pointCard"
-            android:layout_width="327dp"
-            android:layout_height="86dp"
+            android:layout_width="315dp"
+            android:layout_height="74dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="1dp"
             app:cardCornerRadius="30dp"
-            app:cardElevation="30dp" >
+            app:cardElevation="30dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -51,19 +57,29 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="519dp"
-            android:contentDescription="@string/app_name">
+        <TextView
+            android:id="@+id/displayCodeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/item_scroll"
+            android:textAlignment="center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
 
     </LinearLayout>
 
